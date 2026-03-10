@@ -4,15 +4,17 @@ A draft for a **Java-based predictive recursive-descent parser** that processes 
 
 # Grammar Overview
 
-    clase                 -> "class" IDENTIFIER "{" declaracion_variable* "}"
+```
+CLASE                -> "class" identifier "{" DECLARACION_VARIABLE* "}"
 
-    declaracion_variable  -> tipo IDENTIFIER ("=" expresion)? ";"
+DECLARACION_VARIABLE -> TIPO identifier ("=" EXPRESION)? ";"
 
-    tipo                  -> entero | int | char | cadena | string | booleano | boolean
+TIPO                 -> entero | int | char | cadena | string | booleano | boolean
 
-    expresion             -> literal
+EXPRESION            -> LITERAL
 
-    literal               -> INTEGER | CHARACTER | STRING
+LITERAL              -> integer | character | string
+```
 
 # Running the Parser
 
