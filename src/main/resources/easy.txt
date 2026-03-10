@@ -1,0 +1,8 @@
+class VariablesGlobalesOnly {
+    entero contadorGlobal = 1;
+    int globalCounter = 2;
+    entero globalChar = 'A';
+    int globalString = "Hello, World!";
+    entero activo = 3;
+    int ready = 4;
+}

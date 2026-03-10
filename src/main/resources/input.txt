@@ -1,6 +1,121 @@
-{
-  0;
-  1 + 2;
-  3 * (4 + hello);
-}
+class ParserTest {
 
+  // -------- Global Variables --------
+  int globalCounter = 0;
+  entero contadorGlobal = 10;
+  float globalAverage = 0.0;
+  cadena estado = "inicial";
+  boolean ready = true;
+  booleano activo = verdadero;
+
+  // -------- English Method --------
+  int computeSum(int a, int b) {
+    int result = 0;
+    int i = 0;
+    print(a);
+    print(b);
+    result = a + b;
+    if (result > 10) {
+      print(result);
+    } else {
+      print(0);
+    }
+    for (i = 0; i < result; i = i + 1) {
+      if (i == 3) {
+        continue;
+      }
+      if (i == 7) {
+        break;
+      }
+      print(i);
+    }
+    int x = 10;
+    int y = 2;
+    int z = x / y;
+    print(z);
+    print(-1);
+    return result;
+  }
+
+  // -------- Spanish Method --------
+  entero calcularPromedio(entero a, entero b) {
+    entero suma = 0;
+    entero promedio = 0;
+    imprimir(a);
+    imprimir(b);
+    suma = a + b;
+    promedio = suma / 2;
+    si(promedio > 5) {
+      imprimir(promedio);
+    }
+    sino {
+      imprimir(0);
+    }
+    para(entero i = 0; i < promedio;
+    i = i + 1){
+      si(i == 2) {
+        continuar;
+      }
+      si(i == 6) {
+        romper;
+      }
+      imprimir(i);
+    }
+
+    intentar {
+      entero x = 20;
+      entero y = 4;
+      entero z = x / y;
+      imprimir(z);
+    }
+    capturar {
+      imprimir(-1);
+    }
+    finalmente {
+      imprimir(888);
+    }
+    retornar promedio;
+  }
+
+  // -------- Main Method --------
+  int main() {
+    int x = 5;
+    entero y = 7;
+    int sum = computeSum(x, y);
+    entero prom = calcularPromedio(x, y);
+    print(sum);
+    imprimir(prom);
+    globalCounter = sum;
+    contadorGlobal = prom;
+    while (x > 0) {
+      x = x - 1;
+      print(x);
+    }
+    mientras(y > 0) {
+      y = y - 1;
+      imprimir(y);
+    }
+    switch (sum) {
+      case 10:
+        print(10);
+        break;
+      case 20:
+        print(20);
+        break;
+      default:
+        print(0);
+    }
+    switch (prom) {
+      caso 5:
+      imprimir(5);
+      romper;
+      caso 8:
+      imprimir(8);
+      romper;
+      predeterminado:
+      imprimir(-1);
+    }
+    return 0;
+  }
+
+}
